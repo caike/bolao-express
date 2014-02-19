@@ -9,7 +9,7 @@ exports.upcoming = function(req, res){
 
   event.fights.push({
     id: 1,
-    division: 'Middleweight',
+    division: 'Bantamweight',
     fighters: [ 'Ronda Rousey', 'Sara McMann' ]
   });
   event.fights.push({
