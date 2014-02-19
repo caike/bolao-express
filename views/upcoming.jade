@@ -11,7 +11,7 @@ block content
         p.nominees
           each fighter in fight.fighters
             label(class='radio')
-              input(type='radio', name='', value='')
+              input(type='radio', name='fight[#{fight.id}]', value=fighter)
               = fighter
 
         p.entry-actions
