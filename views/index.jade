@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  div.category-list
+    section.category
+
+      - for (var x=0; x<3; x++)
+        h3 Middleweight
+
+        p.nominees
+          - for (var y=0; y<2; y++)
+            label(class='radio')
+              input(type='radio', name='', value='')
+              | Ronda Rousey
+
+        p.entry-actions
+          button.btn Save
+
+
