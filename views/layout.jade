@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title= title
+    title= event.title
     link(rel='stylesheet', href='/stylesheets/meu-bolao.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
@@ -12,6 +12,6 @@ html
           li
             a(href='#') Login with Facebook
 
-      .header-logo: h1 UFC 170 Picks
+      .header-logo: h1= event.title + ' Picks'
 
       block content
