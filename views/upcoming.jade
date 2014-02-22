@@ -3,18 +3,16 @@ extends layout
 block content
   div.category-list
     section.category
+      ul.fights
 
-      each fight in event.fights
-        h3
-          = fight.division
-
-        p.nominees
-          each fighter in fight.fighters
-            label(class='radio')
-              input(type='radio', name='fight[#{fight.id}]', value=fighter)
-              = fighter
-
-        p.entry-actions
-          button.btn Save
-
-
+  script(type='text/template' id='fight-division')
+    h3
+      <%= division %>
+    p.nominees
+      <% _.each(fighters, function(fighter){ %>
+      label(class='radio')
+        input(type='radio', name!="fight['<%= id %>']", value!='<%= fighter %>')
+        | <%= fighter %>
+      <% }); %>
+      p.entry-actions
+        button.btn Save
