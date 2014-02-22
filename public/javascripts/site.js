@@ -5,6 +5,12 @@ var UpcomingFights = Backbone.Collection.extend({
 var FightsView = Backbone.View.extend({
   el: 'ul.fights',
   tagName: 'li',
+  events: {
+    'click': function () {
+      // TODO: create a new pick.
+      return alert('POST to /picks');
+    }
+  },
 
   initialize: function () {
     this.collection.on('reset', this.render, this);
