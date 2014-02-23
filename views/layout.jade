@@ -10,7 +10,10 @@ html
       .masthead
         ul.nav.nav-pills.pull-right
           li
-            a(href='#') Login with Facebook
+            if userName
+              a(href='#')= userName
+            else
+              a(href='/auth/facebook') Login with Facebook
 
       .header-logo: h1= event.title + ' Picks'
 
