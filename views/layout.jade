@@ -4,10 +4,6 @@ html
     title= event.title
     link(rel='stylesheet', href='/stylesheets/meu-bolao.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='javascripts/jquery.js')
-    script(src='http://underscorejs.org/underscore-min.js')
-    script(src='http://backbonejs.org/backbone-min.js')
-    script(src='javascripts/site.js')
   body
     .container-narrow
 
@@ -19,3 +15,10 @@ html
       .header-logo: h1= event.title + ' Picks'
 
       block content
+
+    script(src='javascripts/lib/jquery/dist/jquery.js')
+    script(src='javascripts/lib/underscore/underscore.js')
+    script(src='javascripts/lib/backbone/backbone.js')
+    script(src='javascripts/views/fights.js')
+    script(src='javascripts/collections/upcomingFights.js')
+    script(src='javascripts/site.js')
