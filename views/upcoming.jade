@@ -10,9 +10,10 @@ block content
       <%= division %>
     p.nominees
       <% _.each(fighters, function(fighter){ %>
-      label(class='radio')
-        input(type='radio', name!="fight['<%= id %>']", value!='<%= fighter %>')
-        | <%= fighter %>
-      <% }); %>
-      p.entry-actions
-        button.btn Save
+      form
+        label(class='radio')
+          input(type='radio', name!="fight[<%= id %>]", value!='<%= fighter %>')
+          | <%= fighter %>
+        <% }); %>
+        p.entry-actions
+          button.btn Save
